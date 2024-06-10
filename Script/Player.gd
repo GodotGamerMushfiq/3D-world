@@ -29,7 +29,7 @@ func _ready():
 	captured = true
 	GlobalSignal.connect("power_up" , self, "_power_up")
 
-
+# Hello
 func _physics_process(delta):
 	head.rotation_degrees.x = look_rotation.x
 	rotation_degrees.y = look_rotation.y
