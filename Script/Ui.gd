@@ -5,8 +5,13 @@ var score_count = 0
 
 func _ready():
 	GlobalSignal.connect("change_score" , self, "_change_score")
+	GlobalSignal.connect("can_use" , self, "_can_use")
 
-
+func _can_use(state):
+	if state:
+		$"%UseLabel".visible = true
+	else:
+		$"%UseLabel".visible = false
 
 
 

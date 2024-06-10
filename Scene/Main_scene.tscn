@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Script/Main_scene.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Scene/Power_up.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scene/MyTree.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Flower.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scene/MovingDoor.tscn" type="PackedScene" id=10]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -182,3 +183,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9429, 9.06748, 25.3716 )
 
 [node name="Flower10" parent="." instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9429, 9.06748, 19.3025 )
+
+[node name="MovingDoor" parent="." instance=ExtResource( 10 )]
+transform = Transform( 0.987336, 0, -0.158641, 0, 1, 0, 0.158641, 0, 0.987336, 0.0879919, 2.92034, -3.71545 )
+
+[node name="MovingDoor2" parent="." instance=ExtResource( 10 )]
+transform = Transform( 0.987336, 0, -0.158641, 0, 1, 0, 0.158641, 0, 0.987336, 16.4414, 2.92034, -5.78628 )
