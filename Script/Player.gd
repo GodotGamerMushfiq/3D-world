@@ -52,7 +52,7 @@ func _physics_process(delta):
 
 
 func _power_up():
-	jump = 30
+	speed = 20
 
  
 

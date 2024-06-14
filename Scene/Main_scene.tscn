@@ -9,7 +9,7 @@
 [ext_resource path="res://Scene/Power_up.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scene/MyTree.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Flower.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scene/MovingDoor.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scene/Jump_power.tscn" type="PackedScene" id=10]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -68,7 +68,7 @@ transform = Transform( 1.06397, 0, 0, 0, 1.18243, 0, 0, 0, 1.05257, -30.8483, 2.
 transform = Transform( 1.06397, 0, 0, 0, 1.18243, 0, 0, 0, 1.05257, -19.8733, 2.18863, 28.2044 )
 
 [node name="Score4" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1.06397, 0, 0, 0, 1.18243, 0, 0, 0, 1.05257, -7.94975, 2.18863, -25.4213 )
+transform = Transform( 0.88951, 0, 0, 0, 0.811595, 0, 0, 0, 1.05257, -7.94975, 2.18863, -25.4213 )
 
 [node name="Score5" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1.06397, 0, 0, 0, 1.18243, 0, 0, 0, 1.05257, 2.60188, 2.18863, -43.4883 )
@@ -184,8 +184,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9429, 9.06748, 25.3716 )
 [node name="Flower10" parent="." instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9429, 9.06748, 19.3025 )
 
-[node name="MovingDoor" parent="." instance=ExtResource( 10 )]
-transform = Transform( 0.987336, 0, -0.158641, 0, 1, 0, 0.158641, 0, 0.987336, 0.0879919, 2.92034, -3.71545 )
-
-[node name="MovingDoor2" parent="." instance=ExtResource( 10 )]
-transform = Transform( 0.987336, 0, -0.158641, 0, 1, 0, 0.158641, 0, 0.987336, 16.4414, 2.92034, -5.78628 )
+[node name="Jump_power" parent="." instance=ExtResource( 10 )]
+transform = Transform( 1.51831, 0, 0, 0, 3.56314, 0, 0, 0, 1.25878, 10.7067, -1.85908, -32.1123 )

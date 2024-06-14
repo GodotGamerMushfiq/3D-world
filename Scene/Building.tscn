@@ -1,4 +1,6 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=52 format=2]
+
+[ext_resource path="res://Scene/MovingDoor.tscn" type="PackedScene" id=1]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -756,3 +758,12 @@ mesh = SubResource( 39 )
 
 [node name="CollisionShape" type="CollisionShape" parent="MeshInstance42/StaticBody"]
 shape = SubResource( 49 )
+
+[node name="MovingDoor" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.471968, -0.0160577, -0.0758337, 0.0204494, 0.476911, -0.00328572, 0.0594317, 0, 0.369886, -0.50232, 0.554267, -1.00384 )
+
+[node name="MovingDoor2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.0237675, 0.000682262, 0.275948, 0.0312397, 0.352539, -0.00427897, -0.473818, 0.0280063, 0.054315, -1.23833, 0.423939, 0.268203 )
+
+[node name="MovingDoor3" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.47257, 0.0184221, 0.0334279, 0.0226819, 0.321929, 0, -0.056291, 0.00219438, -0.279291, 0.673602, 0.330195, 2.99803 )
