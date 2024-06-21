@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Script/Main_scene.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scene/MyTree.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Flower.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scene/Jump_power.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scene/key.tscn" type="PackedScene" id=11]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -185,4 +186,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9429, 9.06748, 25.3716 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9429, 9.06748, 19.3025 )
 
 [node name="Jump_power" parent="." instance=ExtResource( 10 )]
-transform = Transform( 1.51831, 0, 0, 0, 3.56314, 0, 0, 0, 1.25878, 10.7067, -1.85908, -32.1123 )
+transform = Transform( 1.51831, 0, 0, 0, 3.56314, 0, 0, 0, 1.25878, 10.7067, -1.73933, -32.1123 )
+
+[node name="key" parent="." instance=ExtResource( 11 )]
+transform = Transform( 3.99558, 0, 0, 0, 3.29599, 0, 0, 0, 3.01551, 33.438, 2.14349, -12.7463 )
+
+[editable path="Building"]
+[editable path="Building/MovingDoor"]
+[editable path="Building/MovingDoor2"]
+[editable path="Building/MovingDoor3"]

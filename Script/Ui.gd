@@ -9,9 +9,18 @@ func _ready():
 	GlobalSignal.connect("collected_key" , self, "_collected_key")
 	GlobalSignal.connect("locked_door" , self, "_locked_door")
 	
+	$KeyLabel.text = "Keys: "+str(GlobalVars.key_count)
+	
+func _locked_door():h
+	$"%UseLabel".text = "LOCKED"
+	$"%UseLabel".visible = true 
+	
+
+
 
 func _can_use(state):
 	if state:
+		$"%UseLabel".text = "press e"
 		$"%UseLabel".visible = true
 	else:
 		$"%UseLabel".visible = false

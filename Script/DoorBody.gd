@@ -3,7 +3,8 @@ extends StaticBody
 var door_closed = true
 
 var player_near = false
-
+ 
+export var locked = true
 
 func _ready():
 	pass # Replace with function body.
@@ -20,7 +21,19 @@ func _use_door():
 func _input(event):
 	if event.is_action_pressed("use"):
 		if player_near:
-			_use_door()
+			if locked:
+				_check_keys()
+			else:
+				_use_door()
+
+func _check_keys():
+	if GlobalVars.key_count > 0:
+		locked - false
+		GlobalSignal.emit_signal("collected_key" ,-1)
+		_use_door()
+	else:
+		GlobalSignal.emit_signal("locked_door")
+
 
 
 func _on_DoorArea_body_entered(body):
