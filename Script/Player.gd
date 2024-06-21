@@ -28,6 +28,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	captured = true
 	GlobalSignal.connect("power_up" , self, "_power_up")
+	GlobalSignal.connect("jump_power" , self, "_jump_power")
 
 # Hello
 func _physics_process(delta):
@@ -54,7 +55,8 @@ func _physics_process(delta):
 func _power_up():
 	speed = 20
 
- 
+func _jump_power():
+	jump = 30
 
 
 

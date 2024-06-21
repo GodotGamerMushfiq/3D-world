@@ -3,6 +3,7 @@ extends Control
 var score_count = 0
 
 
+
 func _ready():
 	GlobalSignal.connect("change_score" , self, "_change_score")
 	GlobalSignal.connect("can_use" , self, "_can_use")
@@ -11,11 +12,14 @@ func _ready():
 	
 	$KeyLabel.text = "Keys: "+str(GlobalVars.key_count)
 	
-func _locked_door():h
+func _locked_door():
 	$"%UseLabel".text = "LOCKED"
 	$"%UseLabel".visible = true 
 	
 
+func _collected_key(count):
+	GlobalVars.key_count += count
+	$KeyLabel.text = "Key : "+str(GlobalVars.key_count)
 
 
 func _can_use(state):

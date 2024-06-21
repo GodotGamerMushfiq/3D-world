@@ -4,7 +4,7 @@ var door_closed = true
 
 var player_near = false
  
-export var locked = true
+export var locked = false
 
 func _ready():
 	pass # Replace with function body.
