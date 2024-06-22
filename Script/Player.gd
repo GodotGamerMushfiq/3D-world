@@ -1,6 +1,6 @@
 extends KinematicBody
 
-
+var can_climb = false
 
 
 export var speed = 10
@@ -29,11 +29,22 @@ func _ready():
 	captured = true
 	GlobalSignal.connect("power_up" , self, "_power_up")
 	GlobalSignal.connect("jump_power" , self, "_jump_power")
+	GlobalSignal.connect("climbing" , self, "_climbing")
 
-# Hello
+
 func _physics_process(delta):
 	head.rotation_degrees.x = look_rotation.x
 	rotation_degrees.y = look_rotation.y
+	if can_climb:
+		velocity.y = 0
+		if Input.is_action_just_pressed("climb_down"):
+			velocity.y = jump
+		elif Input.is_action_just_pressed("climb_down"):
+			velocity.y = -jump
+	else:
+		velocity.y -= gravity * delta
+	
+
 
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -50,6 +61,11 @@ func _physics_process(delta):
 
 	velocity = move_and_slide(velocity, Vector3.UP)
 
+func _climbing(state):
+	#if state:
+		
+	velocity.y = 0
+	can_climb = state
 
 
 func _power_up():

@@ -115,7 +115,7 @@ tracks/2/keys = {
 extents = Vector3( 3.01772, 1, 1 )
 
 [node name="MovingDoor" type="Spatial"]
-transform = Transform( 2.04505, 0, -0.32859, 0, 2.07128, 0, 0.32859, 0, 2.04505, 0.0508072, 0, 0 )
+transform = Transform( 2.04245, -0.104323, -0.328173, 0.103002, 2.06865, -0.0165499, 0.32859, 0, 2.04505, 0.0508072, 0, 0 )
 
 [node name="Hinge" type="Spatial" parent="."]
 transform = Transform( 0.988025, 0.0666546, 0.139152, -0.0697458, 0.997412, 0.0174524, -0.137628, -0.0269487, 0.990117, 0.196105, 0.615175, -0.0315092 )
@@ -130,6 +130,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 4.65661e-10, 0, 1, 0, 0, 0 )
 script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Hinge/door/DoorBody"]
+transform = Transform( 0.998603, -0.121324, -0.000192389, 0.0230139, 0.998603, -0.000115171, 0.00372895, 0.0105478, 0.999999, 0, 0, 0 )
 shape = SubResource( 3 )
 
 [node name="DoorAnim" type="AnimationPlayer" parent="Hinge"]

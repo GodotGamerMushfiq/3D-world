@@ -9,6 +9,7 @@ func _ready():
 	GlobalSignal.connect("can_use" , self, "_can_use")
 	GlobalSignal.connect("collected_key" , self, "_collected_key")
 	GlobalSignal.connect("locked_door" , self, "_locked_door")
+	GlobalSignal.connect("climbing" , self, "_climbing")
 	
 	$KeyLabel.text = "Keys: "+str(GlobalVars.key_count)
 	
@@ -29,6 +30,12 @@ func _can_use(state):
 	else:
 		$"%UseLabel".visible = false
 
+func _climbing(state):
+	if state:
+		$"%UseLabel".text = "x to climb up / z to climb up"
+		$"%UseLabel".visible = true
+	else:
+		$"%UseLabel".visible = false
 
 
 func _change_score():
